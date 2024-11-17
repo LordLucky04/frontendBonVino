@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'https://www.jsondataai.com/dashboard/K3DV7vT';
+const URL = 'http://localhost:8090/actualizacion/bodegas';
 
 const getBodegas = async () => {
     try{
@@ -13,7 +13,7 @@ const getBodegas = async () => {
 }
 const postBodegas = async (bodegas) => {
     try{
-        const res = await axios.patch(URL, bodegas,{
+        const res = await axios.post(URL, bodegas,{
             headers: {
                 'Content-Type': 'application/json'
             }

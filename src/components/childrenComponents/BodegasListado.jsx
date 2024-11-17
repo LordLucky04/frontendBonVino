@@ -1,10 +1,10 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 
-export default function BodegasListado({ rows, onBuscarBodega, onToggleBodega }) {
-  if (!rows || rows.length === 0) {
+export default function BodegasListado({ bodegas, onBuscarBodega, onToggleBodega, onActualizarBodegas }) {
+  if (!bodegas || bodegas.length === 0) {
     return (
-      <div className="container mt-5">
+      <div className="container-izquierda mt-5 ms-n3" style={{marginRight: 200}}>
         <div className="header-container p-3 mb-2 bg-primary text-white rounded d-flex justify-content-between align-items-center">
           <h2 className="mb-0" style={{ fontFamily: "monospace" }}>Bodegas</h2>
           <button
@@ -33,12 +33,13 @@ export default function BodegasListado({ rows, onBuscarBodega, onToggleBodega })
     onToggleBodega(bodegaId); // Notifica al padre
   };
 
-  const tbody = rows.map((bodega) => (
+  const tbody = bodegas.map((bodega) => (
     <tr key={bodega.id}>
       <td>
         <input
           type="checkbox"
           onChange={() => handleCheckboxChange(bodega.id)}
+          style={{ width: 20, height: 20, cursor: "pointer" }}
         />
       </td>
       <td>{bodega.nombre}</td>
@@ -46,7 +47,7 @@ export default function BodegasListado({ rows, onBuscarBodega, onToggleBodega })
   ));
 
   return (
-    <div className="container mt-5">
+    <div className="container-izquierda mt-5 ms-n3" style={{marginRight: 200}}>
       <div className="header-container p-3 mb-2 bg-primary text-white rounded d-flex justify-content-between align-items-center">
         <h2 className="mb-0" style={{ fontFamily: "monospace" }}>Bodegas</h2>
         <button
@@ -67,6 +68,14 @@ export default function BodegasListado({ rows, onBuscarBodega, onToggleBodega })
         </thead>
         <tbody>{tbody}</tbody>
       </Table>
+      <button
+          type="button"
+          style={{ width: 150, background: "green", marginRight: 200 }}
+          className="btn btn-secondary"
+          onClick={onActualizarBodegas}
+        >
+          Actualizar Bodegas
+        </button>
     </div>
   );
 }
