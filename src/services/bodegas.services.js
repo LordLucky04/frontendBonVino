@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'http://localhost:8080/actualizacion/bodegas';
+const URL = 'https://www.jsondataai.com/dashboard/K3DV7vT';
 
 const getBodegas = async () => {
     try{

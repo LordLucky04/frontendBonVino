@@ -1,5 +1,4 @@
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import Footer from './components/Footer/Footer.jsx';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Inicio from './components/Inicio.jsx';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,13 +7,12 @@ function App() {
   return (
     <div id="root">
       <BrowserRouter>
-        <Menu style={{background: "green"}}/>
         <div className="main-content">
           <Routes>
             <Route path="/inicio" element={<Inicio />} />
+            <Route path="/" element={<Inicio />} />
           </Routes>
         </div>
-        <Footer />
       </BrowserRouter>
     </div>
   );
