@@ -34,8 +34,8 @@ const VinosListado = ({ vinos }) => {
               </div>
           ))
         ) : (
-          <div className="d-flex align-items-start justify-content-start" style={{ minHeight: '200px' }}>
-            <p className="text-muted">No hay vinos cargados</p>
+          <div className="card sm-4" >
+            <p>No hay vinos cargados</p>
           </div>
         )}
       </div>
