@@ -13,7 +13,7 @@ export default function BodegasListado({ bodegas, onBuscarBodega, onToggleBodega
             className="btn btn-secondary"
             onClick={onBuscarBodega}
           >
-            Buscar Bodega
+            Buscar Bodegas
           </button>
         </div>
         <Table responsive>
