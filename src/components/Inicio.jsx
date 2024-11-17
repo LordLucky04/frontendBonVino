@@ -24,6 +24,7 @@ export default function Inicio() {
     
     const data = await bodegasServices.postBodegas(selectBodegas);
     setVinos(Array.isArray(data) ? data : []);
+    setSelectedBodegas([]);
     onBuscarBodega();
   };
   

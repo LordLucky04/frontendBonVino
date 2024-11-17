@@ -16,16 +16,10 @@ export default function BodegasListado({ bodegas, onBuscarBodega, onToggleBodega
             Buscar Bodegas
           </button>
         </div>
-        <Table responsive>
-          <thead>
-            <tr>
-              <th>Seleccionar</th>
-              <th>Nombre Bodega</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </Table>
-      </div>
+          <div className="card sm-4">
+          <p>No hay bodegas cargadas aún</p>
+          </div>
+        </div>
     );
   }
 
